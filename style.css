@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Product Sans', sans-serif;
+    line-height: 1.6;
+}
+
+body#container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr 5rem;
+    grid-template-areas: 
+        "header header header header header"
+        "sidebar main main main main"
+        "footer footer footer footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+.content {
+    grid-area: main;
+    padding: 1rem;
+}
+
+footer {
+    grid-area: footer;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
