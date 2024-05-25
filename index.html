@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Web Page</title>
+    <title>UON Y1 chatroom using Supabase</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body id="container">
     <header>
@@ -17,10 +16,16 @@
         </ul>
     </aside>
     <main class="content">
-        <p>This is the main content area.</p>
+        <form id="userForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="messages"></div>
     </main>
     <footer>
         <p>Footer</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -6,4 +6,23 @@ const client = createClient(supabaseUrl, supabaseKey)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Document is fully loaded');
+
+    const userForm = document.getElementById('userForm');
+
+    userForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        
+        const { data, error } = await client
+            .from('User')
+            .insert([{ username: username.toLowerCase() }]);
+
+        if (error) {
+            console.error('Error creating user:', error);
+            document.getElementById('messages').innerText = `Error creating user: ${error.message}`;
+        } else {
+            console.log('User created:', data);
+            document.getElementById('messages').innerText = `User ${username} created successfully!`;
+        }
+    });
 });
