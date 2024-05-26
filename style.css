@@ -30,6 +30,16 @@ header {
     text-align: center;
 }
 
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    text-decoration: underline;
+}
+
+
 .sidebar {
     grid-area: sidebar;
     background: #f4f4f4;
@@ -194,6 +204,23 @@ footer {
     margin-bottom: 1rem;
 }
 
+.chat-messages::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 .chat-messages div {
     margin-bottom: 1rem;
 }
