@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatroom</title>
+    <title>UoN Y1 CS Chatroom using Supabase</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="index.js" defer></script>
 </head>
 <body id="container">
     <header>
-        <h1>Chatroom</h1>
+        <h1>UoN Y1 CS Chatroom using Supabase</h1>
     </header>
     <aside class="sidebar">
         <ul>
@@ -28,11 +28,18 @@
                     Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
                 </p>
             </form>
+            <div id="messages"></div>
         </div>
-        <div id="messages"></div>
+        <div id="chatroom" class="hidden">
+            <div id="chatMessages" class="chat-messages"></div>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type your message here..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </main>
     <footer>
-        <p>Footer</p>
+        <p>Farhan Shaikh</p>
     </footer>
 </body>
 </html>
