@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Schema Diagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="container">
+    <header>
+        <h1><a href="index.html">Web project Y1 CS Chatroom using Supabase</a></h1>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <ul><a href="https://github.com/GitFarhanS">My GitHub </a></ul>
+            <ul><a href="schema.html">Schema </a></ul>
+        </ul>
+    </aside>
+    <div class="schema-container">
+        <div class="table user-table">
+            <div class="table-title">User</div>
+            <div class="table-content">
+                <div class="table-row">
+                    <div class="column">id</div>
+                    <div class="column">UUID (PK)</div>
+                </div>
+                <div class="table-row">
+                    <div class="column">username</div>
+                    <div class="column">VARCHAR(255)</div>
+                </div>
+                <div class="table-row">
+                    <div class="column">created_at</div>
+                    <div class="column">TIMESTAMP</div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="table message-table">
+            <div class="table-title">Message</div>
+            <div class="table-content">
+                <div class="table-row">
+                    <div class="column">id</div>
+                    <div class="column">UUID (PK)</div>
+                </div>
+                <div class="table-row">
+                    <div class="column">user_id</div>
+                    <div class="column">UUID (FK)</div>
+                </div>
+                <div class="table-row">
+                    <div class="column">content</div>
+                    <div class="column">TEXT</div>
+                </div>
+                <div class="table-row">
+                    <div class="column">created_at</div>
+                    <div class="column">TIMESTAMP</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
