@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     chatroom.classList.add('fade-in');
                     chatroom.classList.remove('hidden');
                     loadMessages(); // Load existing messages
+                    startPolling(); // Start polling for new messages
                 };
 
                 authForm.addEventListener('animationend', onFadeOutEnd, { once: true });
@@ -112,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     chatroom.classList.add('fade-in');
                     chatroom.classList.remove('hidden');
                     loadMessages(); // Load existing messages
+                    startPolling(); // Start polling for new messages
                 };
 
                 authForm.addEventListener('animationend', onFadeOutEnd, { once: true });
@@ -158,5 +160,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 chatMessages.appendChild(messageDiv);
             });
         }
+    }
+
+    function startPolling() {
+        setInterval(loadMessages, 1000); // Poll for new messages every second
     }
 });
