@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UON Y1 chatroom using Supabase</title>
+    <title>Chatroom</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="index.js" defer></script>
 </head>
 <body id="container">
     <header>
-        <h1>UON Y1 chatroom using Supabase</h1>
+        <h1>Chatroom</h1>
     </header>
     <aside class="sidebar">
         <ul>
-            <li><a href="https://github.com/GitFarhanS">My GitHub</a></li>
+            <ul><a href="https://github.com/GitFarhanS">My GitHub </a></ul>
         </ul>
     </aside>
     <main class="content">
-        <form id="userForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <button type="submit">Submit</button>
-        </form>
+        <div id="auth">
+            <form id="authForm">
+                <h2 id="formTitle">Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <button type="submit">Login</button>
+                <p id="toggleForm">
+                    Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+                </p>
+            </form>
+        </div>
         <div id="messages"></div>
     </main>
     <footer>
         <p>Footer</p>
     </footer>
-    <script src="index.js"></script>
 </body>
 </html>
