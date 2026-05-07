@@ -1,2 +1,2 @@
 # chatroom
-Using Supabase
+Using Supabase API, JS, HTML and CSS
